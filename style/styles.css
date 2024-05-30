@@ -1,0 +1,128 @@
+/* BODY */
+body {
+   padding: 30px;
+   background-color: aliceblue;
+   font-family: Arial, sans-serif;
+}
+
+h1 {
+   font-size: 50px;
+   margin-bottom: 5px;
+   text-align: center;
+}
+
+.subtitle {
+   margin-top: 5px;
+   text-align: center;
+}
+
+#container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
+}
+
+#myCombobox {
+   width: 250px;
+   height: 25px;
+}
+
+.cerita-ceritaku {
+   display: none;
+}
+
+button {
+   background-color: white;
+   width: 250px;
+}
+
+.logout {
+   margin-top: 75px;
+   text-align: center;
+}
+
+
+/* CONTENT */
+.content-ceritaku,
+.content-kumpulan {
+   background-color: whitesmoke;
+   width: 250px;
+   border: 2px solid black;
+   margin: 15px auto;
+   padding-bottom: 20px;
+}
+
+.content-ceritaku p,
+.content-kumpulan p {
+   text-align: left;
+   padding-left: 15px;
+}
+
+
+/* RESPONSIBLE */
+
+/* MOBILE */
+@media screen and (min-width: 576px) {
+   .kategori {
+      display: none;
+   }
+
+   h1,
+   .subtitle {
+      text-align: left;
+   }
+
+   .cerita-ceritaku {
+      display: inline;
+      margin-top: 50px;
+   }
+
+   .grid-kumpulan {
+      display: grid;
+      grid-template-columns: 250px 250px;
+      column-gap: 5%;
+      justify-content: center;
+   }
+
+   .grid-ceritaku {
+      display: grid;
+      grid-template-columns: 250px 250px;
+      column-gap: 5%;
+      justify-content: center;
+   }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+   #container {
+      display: grid;
+      grid-template-columns: 37% 2% 62%;
+   }
+
+   .cerita-ceritaku {
+      order: 0;
+      margin-top: 0;
+   }
+
+   .line {
+      background-color: black;
+      width: 2px;
+      margin-left: 5%;
+      margin-right: 5%;
+      order: 1;
+   }
+
+   .cerita-kumpulan {
+      order: 2;
+   }
+
+   .grid-ceritaku {
+      grid-template-columns: 250px;
+   }
+
+   .logout {
+      margin-top: 75px;
+      text-align: left;
+   }
+}

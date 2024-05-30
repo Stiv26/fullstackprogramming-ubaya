@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Limit 2 Columns</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: #e0e0e0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Media query untuk layar yang lebih kecil */
+        @media (max-width: 400px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-item">Column 1</div>
+    <div class="grid-item">Column 2</div>
+    <div class="grid-item">Column 3</div>
+    <!-- Tambahkan lebih banyak kolom jika diperlukan -->
+</div>
+
+</body>
+</html>
